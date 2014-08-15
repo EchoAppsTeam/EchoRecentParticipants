@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"manifest": {
+		"id": "echo-recent-participants",
+		"name": "Recent Participants"
+	},
+	"appBaseURLs": {
+		"dev": "//cdn.echoenabled.com<%= release.options.versionPath() %>/dev",
+		"prod": "//cdn.echoenabled.com<%= release.options.versionPath() %>"
+	},
+	"apiBaseURLs": {
+		"StreamServer": {
+			"basic": "//api.echoenabled.com/v1",
+			"ws": "//live.echoenabled.com/v1"
+		},
+		"DataServer": "https://api.dataserver.echoenabled.com/v1",
+		"AppServer": "http://api.appserver.aboutecho.com"
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "name": "echo-recent-participants",
+  "description": "Echo Recent Participants app",
+  "version": "1.0.0",
+  "author": {
+    "name": "Echo",
+    "url": "http://aboutecho.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EchoAppsTeam/EchoRecentParticipants.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EchoAppsTeam/EchoRecentParticipants/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "cloudapp-boilerplate": "^0.2.0"
+  },
+  "private": true
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Echo Recent Participants app v{%=packageVersions.stable%} Demo</title>
+		<script type="text/javascript" src="//cdn.echoenabled.com/sdk/v3/dev/loader.js"></script>
+	</head>
+<body>
+
+<center><h1>Recent Participants (#puppies)</h1></center>
+<div id="container" style="margin: 0px auto; width: 50%; max-width: 440px;"></div>
+
+<script type="text/javascript">
+	Echo.Loader.initApplication({
+		"scripts": {
+			"dev": "{%= appBaseURLs.dev %}/dev/app.js",
+			"prod": "{%= appBaseURLs.prod %}/app.js"
+		},
+		"component": "Echo.Apps.RecentParticipants",
+		"backplane": {
+			"serverBaseURL": "https://api.echoenabled.com/v1",
+			"busName": "echo"
+		},
+		"config": {
+			"target": document.getElementById("container"),
+			"targetURL": "http://social-chatter.echoplatform.com/social-source-input/fm703jjma7",
+			"dependencies": {
+				"StreamServer": {"appkey": "echo.echo.streamserver.echo.prod"}
+			}
+		}
+	});
+</script>
+
+</body>
+</html>

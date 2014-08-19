@@ -86,6 +86,7 @@ participants.renderers.facepile = function(element) {
 			"appkey": ss.appkey,
 			"apiBaseURL": ss.apiBaseURL,
 			"liveUpdates": ss.liveUpdates,
+			"maxUsersCount": this.config.get("presentation.maxParticipants"),
 			"ready": function() {
 				// update no participants UI
 				// with consistent message and icon

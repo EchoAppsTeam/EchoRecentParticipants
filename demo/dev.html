@@ -7,7 +7,7 @@
 <body>
 
 <center><h1>Recent Participants (#puppies)</h1></center>
-<div id="container" style="margin: 0px auto; width: 50%; max-width: 440px;"></div>
+<div id="container" style="margin: 0px auto; width: 50%; max-width: 470px;"></div>
 
 <script type="text/javascript">
 	Echo.Loader.initApplication({
@@ -19,6 +19,9 @@
 		"config": {
 			"target": document.getElementById("container"),
 			"targetURL": "http://social-chatter.echoplatform.com/social-source-input/fm703jjma7",
+			"presentation": {
+				"maxParticipants": 16
+			},
 			"dependencies": {
 				"StreamServer": {"appkey": "echo.echo.streamserver.echo.prod"}
 			}

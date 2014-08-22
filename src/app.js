@@ -126,7 +126,7 @@ participants.methods._assembleQuery = function() {
 participants.css =
 	'.{class} .echo-streamserver-controls-facecollection-and,' +
 		'.{class} .echo-streamserver-controls-facecollection-more { display: none; }' +
-	'.{class} .echo-streamserver-controls-face-container .echo-streamserver-controls-face-avatar { margin: 5px; }' +
+	'.{class} .echo-streamserver-controls-face-container .echo-streamserver-controls-face-avatar { margin: 5px; vertical-align: middle; }' +
 	'.{class:empty} { border: 1px solid #d2d2d2; margin: 0 5px; padding: 30px 20px; text-align: left; }' +
 	'.{class:empty} .{class:message} { background: url("//cdn.echoenabled.com/apps/echo/conversations/v2/sdk-derived/images/info.png") no-repeat; margin: 0 auto; font-size: 14px; font-family: "Helvetica Neue", Helvetica, "Open Sans", sans-serif; padding-left: 40px; display: block; width: 140px; line-height: 16px; color: #7f7f7f; }';
 

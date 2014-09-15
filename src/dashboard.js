@@ -23,6 +23,8 @@ dashboard.dependencies = [{
 }, {
 	"url": "{config:cdnBaseURL.apps.dataserver}/full.pack.js",
 	"control": "Echo.DataServer.Controls.Pack"
+}, {
+	"url": "//cdn.echoenabled.com/apps/echo/social-map/v1/slider.js"
 }];
 
 dashboard.config = {
@@ -51,24 +53,29 @@ dashboard.config.ecl = [{
 		"title": "Presentation"
 	},
 	"items": [{
-		"component": "Input",
+		"component": "Slider",
 		"name": "avatarSize",
 		"type": "number",
 		"default": 48,
 		"config": {
 			"title": "Avatar size",
 			"desc": "Specifies user avatar size (in px)",
-			"data": {"sample": 48}
+			"min": 10,
+			"max": 100,
+			"step": 1,
+			"unit": "px"
 		}
 	}, {
-		"component": "Input",
+		"component": "Slider",
 		"name": "maxParticipants",
 		"type": "number",
 		"default": 15,
 		"config": {
 			"title": "Maximum participants",
 			"desc": "Specifies maximum amount of participants to be displayed at app load time. Note: new participants will be attached to the list.",
-			"data": {"sample": 15}
+			"min": 5,
+			"max": 50,
+			"step": 1
 		}
 	}, {
 		"component": "Input",
@@ -94,7 +101,8 @@ dashboard.config.ecl = [{
 	"name": "dependencies",
 	"type": "object",
 	"config": {
-		"title": "Dependencies"
+		"title": "Dependencies",
+		"expanded": false
 	},
 	"items": [{
 		"component": "Select",

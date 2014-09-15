@@ -86,6 +86,7 @@ participants.renderers.facepile = function(element) {
 			"appkey": ss.appkey,
 			"apiBaseURL": ss.apiBaseURL,
 			"liveUpdates": ss.liveUpdates,
+			"maxUsersCount": this.config.get("presentation.maxParticipants"),
 			"ready": function() {
 				// update no participants UI
 				// with consistent message and icon
@@ -117,14 +118,15 @@ participants.methods._assembleQuery = function() {
 	var query =
 		"childrenof:{config:targetURL} " +
 		"itemsPerPage:{config:presentation.maxParticipants} " +
+		"sortOrder:reverseChronological " +
 		"children:0";
 	return this.substitute({"template": query});
 };
 
 participants.css =
-	'.{class} .echo-streamserver-controls-facecollection-and { display: none; }' +
-	'.{class} .echo-streamserver-controls-facecollection-more { display: none !important; }' +
-	'.{class} .echo-streamserver-controls-face-container .echo-streamserver-controls-face-avatar { margin: 5px; }' +
+	'.{class} .echo-streamserver-controls-facecollection-and,' +
+		'.{class} .echo-streamserver-controls-facecollection-more { display: none; }' +
+	'.{class} .echo-streamserver-controls-face-container .echo-streamserver-controls-face-avatar { margin: 5px; vertical-align: middle; }' +
 	'.{class:empty} { border: 1px solid #d2d2d2; margin: 0 5px; padding: 30px 20px; text-align: left; }' +
 	'.{class:empty} .{class:message} { background: url("//cdn.echoenabled.com/apps/echo/conversations/v2/sdk-derived/images/info.png") no-repeat; margin: 0 auto; font-size: 14px; font-family: "Helvetica Neue", Helvetica, "Open Sans", sans-serif; padding-left: 40px; display: block; width: 140px; line-height: 16px; color: #7f7f7f; }';
 

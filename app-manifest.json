@@ -1,6 +1,6 @@
 {
-	"id": "{%=manifest.id%}",
-	"name": "{%=manifest.name%}",
+	"id": "echo-recent-participants",
+	"name": "Recent Participants",
 	"description": "Display a facepile of recent participants",
 	"app_version": "{%=packageVersions.stable%}",
 	"icon": "{%=appBaseURLs.prod%}/images/icon.png",
